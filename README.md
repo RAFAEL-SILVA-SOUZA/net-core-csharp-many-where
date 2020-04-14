@@ -1,4 +1,4 @@
-# .Net Core csharp ManyWhere
+# .Net Core Csharp ManyWhere
 
 This extension performs many clauses where
 
