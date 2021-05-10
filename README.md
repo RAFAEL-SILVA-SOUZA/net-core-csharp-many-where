@@ -5,7 +5,8 @@ This extension performs many clauses where
 ```csharp
 using LinqKit;
 
-public static IQueryable<T> ManyWhere<T>(this IQueryable<T> query, IQueryable<Expression<Func<T, bool>>> predicate)
+public static IQueryable<T> ManyWhere<T>(this IQueryable<T> query, 
+                                              IQueryable<Expression<Func<T, bool>>> predicate)
 {
     foreach (var item in predicate)
     {
