@@ -9,8 +9,11 @@ public static IQueryable<T> ManyWhere<T>(this IQueryable<T> query,
                                               IQueryable<Expression<Func<T, bool>>> predicate)
 {
     foreach (var item in predicate)
-    {
-        query = query.Where(item.Expand());
+    {                
+        query = query.Where(item).AsQueryable();
+        
+        //optional using LinqKit
+        //query = query.Where(item.Expand());
     }
 
     return query;
